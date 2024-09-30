@@ -1,0 +1,136 @@
+
+<html>
+<head>
+<title>
+	Parental Registration.
+</title>	
+
+  <link href="css/menu.css" rel="stylesheet" type="text/css">
+  <link href="css/form.css" rel="stylesheet" type="text/css">
+
+<script>
+function myfun() 
+	{
+        
+		var fname=document.getElementById("fname").value;
+		var lname=document.getElementById("lname").value;
+		var mfname=document.getElementById("mfname").value;
+		var mlname= document.getElementById("mlname").value;
+		var email= document.getElementById("email").value;
+		var phone = document.getElementById("phone").value;
+	    var country= document.getElementById("country").value;
+		var city = document.getElementById("city").value;
+        var fage=document.getElementById("fage").value;
+		var mage=document.getElementById("mage").value;
+		var password=document.getElementById("password").value;
+		
+		
+		
+	
+
+	var count=0;
+	
+
+	
+	
+</script>
+
+
+<script type="text/javascript" src="js/jsDatePick.min.1.3.js"></script>
+<script type="text/javascript">
+	window.onload = function()
+	{
+		new JsDatePick({
+			useMode:2,
+			target:"pregdate",
+			dateFormat:"%d-%m-%Y"
+		});
+	};
+</script>
+
+
+</script>
+
+<style type="text/css">
+	body
+	{
+		background-image:url("images/adoption.jpg");
+		background-repeat: no-repeat;
+		background-size: 200%;
+	}
+	
+	h1,h3
+  {
+     color: #fdebd7;
+  }
+</style>
+</head>
+<body>
+<!-- Menu Bar-->
+  
+<center>
+<div class="dropdown">
+  <a href="admindata.php">
+  <button class="dropbtn">BACK</button></a>
+
+</div>
+
+  <div class="dropdown">
+    <a href="manage.html">  <button class="dropbtn">LOGOUT</button></a>
+    
+&nbsp
+ </div>
+
+<!--End of Menu-->
+
+
+<!-- Statring of Form -->
+
+<form id="regForm" action="reg.php" method="post" onSubmit="return myfun(this);">
+
+  <h1>Registration</h1>
+  
+  <div class="labels">
+  <h3>	Father Name:
+    <p><input placeholder="First name..." id="fname" name="fname" required></p>
+    <p><input placeholder="Last name..." name="lname" required></p>
+<h3>	Mother Name:
+    <p><input placeholder="First name..." id="mfname" name="mfname" required></p>
+    <p><input placeholder="Last name..." name="mlname" required></p>
+
+	Contact Info:	
+    <p><input type="email" placeholder="E-mail..."  name="email"required></p>
+    <p><input placeholder="Phone..."  name="phone" required></p>
+
+Country:
+<p><input placeholder="Country..." name="country" required></p>
+City: 
+	<p> <input placeholder="City...."  name="city" required></p>
+ Age :
+ 	<p><input placeholder="Father's Age....." name="fage" required></p>
+    <p><input placeholder="Mother's Age...."  name="mage" required></p>
+    Password:
+    <p><input type="password" placeholder="Password" id="password" name="password"></p>
+ 
+
+ </h3>
+	<center>
+    <div style="float:center;">
+	<button type="submit" id="submit" value="submit" onclick="submit">Submit</button>
+	</a>
+	</center>
+	<p>
+	<center>
+	<div style="float:absolute">
+	
+	<a href="admindata.php"><button type="button" id="cancel" onclick="return">Cancel</button></a>
+	</center>
+	</p>
+  
+
+  
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+    .foo
+    {
+      float: left;   
+      width: 250px;
+      height:400px;
+      margin: 50px 0px 0px 80px;
+      border: 1px solid rgba(0, 0, 0.8, 0.2);
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.9)
+    }
+    .foo:hover
+    {
+      opacity: 1;
+      -ms-transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+      
+      
+    }
+
+    .for
+    {
+    
+      width: 280px;
+      height:400px;
+      margin: 50px 0px 0px 80px;
+      border: 1px solid rgba(0, 0, 0.8, 0.2);
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.9)
+    }
+    .for:hover
+    {
+      opacity: 1;
+      -ms-transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+      
+      
+    }
+     
+    .contact
+    {
+      background-color: #ff5864;
+    }
+    .orphan
+    {
+
+      background: #13b4ff;
+    }
+
+    .school
+    {
+      background: #ab3fdd;
+    }
+    .volunteer
+    {
+      background: #ae163e;
+    }
+    .adoption
+    {
+      background: #7fffd4;
+    }

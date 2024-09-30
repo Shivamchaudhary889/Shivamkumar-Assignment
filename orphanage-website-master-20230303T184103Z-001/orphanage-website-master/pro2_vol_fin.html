@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Payment!
+	</title>
+
+  <link href="css/menu.css" rel="stylesheet" type="text/css">
+  <link href="css/form.css" rel="stylesheet" type="text/css">
+
+<script>
+function myfun() 
+	{
+        
+		var cno=document.getElementById("cno").value;
+		var expries=document.getElementById("expries").value;
+		var cvv=document.getElementById("cvv").value;
+		var fname=document.getElementById("fname").value;
+		var lname = document.getElementById("lname").value;
+		var address = document.getElementById("address").value;
+		var country = document.getElementById("country").value;
+	    var state  = document.getElementById("state").value;
+		var postcode = document.getElementById("postcode").value;
+        var pno=document.getElementById("pno").value;
+        var email=document.getElementById("email").value;
+		
+		
+		
+	
+
+	var count=0;
+	}
+
+	
+	
+</script>
+
+
+<script type="text/javascript" src="js/jsDatePick.min.1.3.js"></script>
+<script type="text/javascript">
+	window.onload = function()
+	{
+		new JsDatePick({
+			useMode:2,
+			target:"pregdate",
+			dateFormat:"%d-%m-%Y"
+		});
+	};
+</script>
+<script type="php">
+<?php
+include("dbcon.php");
+
+$id=mysql_query("select * from reg");
+$row=mysql_fetch_array($id);
+$n=$row[0]+1;
+?>
+</script>
+
+<style type="text/css">
+	body
+	{
+		background-color: #ddd;
+	}
+	
+	h1,h3
+  {
+     color: #fdebd7;
+  }
+</style>
+</head>
+<body>
+
+<!-- Menu Bar-->
+  
+<center>
+<div class="dropdown">
+	<a href="home.html">
+  <button class="dropbtn">Home</button></a>
+
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">About Us</button>
+  <div class="dropdown-content">
+    <a href="mission.html">Mission & Vission</a>
+
+    <a href="rti.html">Right to Information</a>
+&nbsp
+ </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Support</button>
+  <div class="dropdown-content">
+    <a href="project.html">Support a Project</a>
+    <a href="donate.html">Donate Financially</a>
+    <a href="donate_goods.html">Donate Goods in Kind</a>
+    
+&nbsp
+ </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Volunteer</button>
+  <div class="dropdown-content">
+    <a href="volunteer.html">Life as a Volunteer</a>
+    <a href="reg_vol.html"> Apply for Volunteer</a>
+ 
+   
+&nbsp
+ </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Adoption</button>
+  <div class="dropdown-content">
+    <a href="visitor.html">Visitors FAQ's</a>
+    <a href="adoption.html">Adoption</a>
+    <a href="marriage.html">Arrange Marriage </a>
+    <a href="reg.html"> Register for parental account</a>
+    
+&nbsp 
+ </div>
+</div>
+
+<div class="dropdown">
+	<a href="contact.html">
+  <button class="dropbtn">Contact Us</button></a>
+  <div class="dropdown-content">
+  </div>
+</div>
+
+<div class="dropdown">
+  <a href="manage.html">
+  <button class="dropbtn">Management</button></a>
+  <div class="dropdown-content">
+  </div>
+</div>
+&nbsp &nbsp
+
+<div class="dropdown2">
+	<a href="donate.html">
+  <button class="dropbtn2"> Donate Us</button></a>
+
+</div></br>
+</br></br></br></br>
+
+
+
+<!--End of Menu-->
+
+
+
+<!-- Statring of Form -->
+
+<form id="regForm" action="pro2_vol_fin.php" method="post" onSubmit="return myfun(this);">
+
+  <h2>Donate to </br> CHILD SHELTER ORPHAN</h2>
+</br></br>
+<h2>Donate with a credit or debit card </h2>
+
+  
+  <div class="labels">
+  <h3>
+  
+	
+	<p><input placeholder="Card number" id="cno" name="cno" required></p>
+    <p><input  placeholder="expries"  name="expries" required></p>
+    <p><input placeholder="cvv"  name="cvv" type="password" required></p>
+    <p><input placeholder="amount"  name="amount"  required></p>
+
+	<p> <input placeholder="First Name"  name="fname" required></p>
+    <p><input placeholder="Last Name"  name="lname" required></p>
+    </h3>
+    <h2>Billing Address</h2>
+    <h3>
+
+	<p><input placeholder="Address1" id="address" name="address" required></p>
+    <p><input  placeholder="country"  name="country" required></p>
+    <p><input placeholder="State/Territroy"  name="state" required></p>
+
+
+	<p> <input placeholder="Postcode"  name="postcode" required></p>
+    <p><input placeholder="Mobile number"  name="phno" required></p>
+    <p><input type="email" placeholder="Email" name="email" id="email"></p>
+    </h3>
+
+
+
+
+	<center>
+    <div style="float:center;">
+	<button type="submit" id="submit" value="submit" onclick="submit">Donate Now</button>
+	</a>
+	</center>
+	<p>
+	<center>
+	<div style="float:absolute">
+	
+	<a href="project.html"><button type="button" id="cancel" onclick="return">Cancel</button></a>
+	</center>
+	</p>
+  
+</div>
+  <!-- Circles which indicates the steps of the form: -->
+  <div style="text-align:center;margin-top:40px;">
+  
+</form>
+
+
+</body>
+</html>
+
+
+</body>
+</html>

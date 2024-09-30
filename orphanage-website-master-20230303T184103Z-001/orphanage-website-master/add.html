@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		ADD TABLE !
+	</title>
+	<script type="text/javascript">
+		if (doc== "volunteer")
+		{
+			document.location("volunteer.html");
+		}
+		else if (doc== "reg")
+		{
+			document.location("reg.html");
+		}
+		else if (doc== "pro1_vol")
+		{
+			document.location("pro1_vol.html");
+		}
+		else if (doc== "pro2_vol")
+		{
+			document.location("pro2_vol.html");
+		}
+		
+
+
+	</script>
+</head>
+<body>
+	<!-- Statring of Form -->
+
+<form id="regForm" onSubmit="return myfun(this);">
+
+ 
+  
+  <div class="labels">
+  
+
+<p>Select Your Table <select name='doc'>
+      <option value ="Select option" required />SELECT THE TABLE TO INSERT </option>
+     <option value='volunteer' name='volunteer'>Volunteer</option>
+     <option value='pro1_vol' name='pro1_vol'>Project1 Volunteer</option>
+     <option value='pro2_vol' name='pro2_vol'>Project2 Volunteer </option>
+     <option value='reg' name='reg'>Register for Parental</option>
+    </select>
+</p>
+
+
+ </h3>
+	<center>
+    <div style="float:center;">
+	<button type="submit" id="submit" value="submit" onclick="submit">Submit</button>
+	</a>
+	</center>
+	<p>
+	<center>
+	<div style="float:absolute">
+	
+	<a href="admindata.php"><button type="button" id="cancel" onclick="return">Cancel</button></a>
+	</center>
+	</p>
+    
+</form>
+
+
+
+
+</body>
+</html>

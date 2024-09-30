@@ -1,0 +1,115 @@
+ 
+<html>
+<head>
+		<link href="css/menu.css" rel="stylesheet" type="text/css">
+		<link href="css/form.css" rel="stylesheet" type="text/css">
+
+
+<script>
+
+function myfun() 
+	{
+        
+		var email=document.getElementById("email").value;
+		var table=document.getElementById("table").value;
+
+		
+		
+		
+	var count=0;
+	
+}
+	
+	
+</script>
+
+
+<script>
+<?php
+include("dbcon.php");
+
+$id=mysql_query("select * from reg");
+$row=mysql_fetch_array($id);
+$n=$row[0]+1;
+?>
+</script>
+
+<style type="text/css">
+	body
+	{
+		background-image:url("images/hands.png");
+		background-repeat: no-repeat;
+		background-size: 150%;
+	}
+	
+	h1,h3
+  {
+     color: #000000;
+  }
+</style>
+
+</head>
+
+<body>
+
+
+<!-- Menu Bar-->
+  
+<center>
+<div class="dropdown">
+	<a href="admindata.php">
+  <button class="dropbtn">BACK</button></a>
+
+</div>
+
+  <div class="dropdown">
+    <a href="manage.html">  <button class="dropbtn">LOGOUT</button></a>
+    
+&nbsp
+ </div>
+
+
+
+
+<!--End of Menu-->
+
+
+<!-- Statring of Form -->
+
+<form id="regForm" action = "admin_del.php" method="post" onSubmit="myfun(this);">
+
+  <h1>Deleting Records!</h1>
+  
+  <div class="labels">
+  <h3 style=" color: blue;">	DELETE !
+    <p><input placeholder="Deleting Email ID..." id="email" name="email" required></p>
+   
+<p>Select the Table:  <select name='table'>
+      <option value ="Select option" required />SELECT THE TABLE </option>
+     <option value='pay' name='pay'>DONATION</option>
+     <option value='reg_vol' name='reg_vol'>VOLUNTEER</option>
+     <option value='reg' name='reg'>PARENT</option>
+  
+
+    </select>
+</p>
+   
+ </h3>
+	<center>
+    <div style="float:center;">
+	<button type="submit" id="submit" value="submit" onclick="submit">Submit</button>
+	</a>
+	</center>
+	<p>
+	<center>
+	<div style="float:absolute">
+	
+	<a href="admindata.php"><button type="button" id="cancel" onclick="return">Cancel</button></a>
+	</center>
+	</p>
+    
+</form>
+
+
+</body>
+</html>

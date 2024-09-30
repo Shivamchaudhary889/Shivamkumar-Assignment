@@ -1,0 +1,211 @@
+
+<html>
+<head>
+<title>
+	Parental Registration.
+</title>	
+
+  <link href="css/menu.css" rel="stylesheet" type="text/css">
+  <link href="css/form.css" rel="stylesheet" type="text/css">
+
+<script>
+function myfun() 
+	{
+        
+    if(phone.length < 10)
+    {
+      alert("Invalid number length");
+      exit();
+
+    }
+    else
+    {
+      document.location ("reg.php");
+    }
+   
+		var fname=document.getElementById("fname").value;
+		var lname=document.getElementById("lname").value;
+		var mfname=document.getElementById("mfname").value;
+		var mlname= document.getElementById("mlname").value;
+		var email= document.getElementById("email").value;
+		var phone = document.getElementById("phone").value;
+	  var country= document.getElementById("country").value;
+		var city = document.getElementById("city").value;
+    var fage=document.getElementById("fage").value;
+		var mage=document.getElementById("mage").value;
+		var password=document.getElementById("password").value;
+
+   
+
+
+
+
+}
+
+
+</script>
+
+
+<script type="text/javascript" src="js/jsDatePick.min.1.3.js"></script>
+<script type="text/javascript">
+	window.onload = function()
+	{
+		new JsDatePick({
+			useMode:2,
+			target:"pregdate",
+			dateFormat:"%d-%m-%Y"
+		});
+	};
+</script>
+
+
+</script>
+
+<style type="text/css">
+	body
+	{
+		background-image:url("images/adoption.jpg");
+		background-repeat: no-repeat;
+		background-size: 200%;
+	}
+	
+	h1,h3
+  {
+     color: #fdebd7;
+  }
+</style>
+</head>
+<body>
+<!-- Menu Bar-->
+  
+<center>
+<div class="dropdown">
+  <a href="home.html">
+  <button class="dropbtn">Home</button></a>
+
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">About Us</button>
+  <div class="dropdown-content">
+    <a href="mission.html">Mission & Vission</a>
+ 
+    <a href="rti.html">Right to Information</a>
+&nbsp
+ </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Support</button>
+  <div class="dropdown-content">
+    <a href="project.html">Support a Project</a>
+    <a href="donate.html">Donate Financially</a>
+    <a href="donate_goods.html">Donate Goods in Kind</a>
+    
+&nbsp
+ </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Volunteer</button>
+  <div class="dropdown-content">
+    <a href="volunteer.html">Life as a Volunteer</a>
+    <a href="reg_vol.html"> Apply for Volunteer</a>
+ 
+   
+&nbsp
+ </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Adoption</button>
+  <div class="dropdown-content">
+    <a href="visitor.html">Visitors FAQ's</a>
+    <a href="adoption.html">Adoption</a>
+    <a href="marriage.html">Arrange Marriage </a>
+    <a href="reg.html"> Register for parental account</a>
+    
+&nbsp 
+ </div>
+</div>
+
+<div class="dropdown">
+  <a href="contact.html">
+  <button class="dropbtn">Contact Us</button></a>
+  <div class="dropdown-content">
+  </div>
+</div>
+
+<div class="dropdown">
+  <a href="manage.html">
+  <button class="dropbtn">Management</button></a>
+  <div class="dropdown-content">
+  </div>
+</div>
+&nbsp &nbsp
+
+<div class="dropdown2">
+  <a href="donate.html">
+  <button class="dropbtn2"> Donate Us</button></a>
+
+</div></br>
+</br></br></br></br>
+
+
+
+<!--End of Menu-->
+
+
+<!-- Statring of Form -->
+<center><h2><b>Already have an account? Login now!!</b></h2>
+    <a href="adoption.html"><input type="button" name="login" value="Login"></a></center>
+<form id="regForm" action="reg.php" method="post" onSubmit="myfun(this);">
+
+  <h1>Registration</h1>
+  
+  <div class="labels">
+  <h3>	Father Name:
+    <p><input placeholder="First name..." id="fname" name="fname"  required></p>
+    <p><input placeholder="Last name..." name="lname" required></p>
+<h3>	Mother Name:
+    <p><input placeholder="First name..." id="mfname" name="mfname" required></p>
+    <p><input placeholder="Last name..." name="mlname" required></p>
+
+	Contact Info:	
+    <p><input type="email" placeholder="E-mail..."  name="email" required></p>
+    <p><input placeholder="Phone..."  name="phone" required></p>
+   
+
+Country:
+<p><input placeholder="Country..." name="country" required></p>
+City: 
+	<p> <input placeholder="City...."  name="city" required></p>
+ Age :
+ 	<p><input placeholder="Father's Age....." name="fage" required></p>
+    <p><input placeholder="Mother's Age...."  name="mage" required></p>
+    Password:
+
+    <p><input type="password" placeholder="Password" id="password" name="password"></p>
+ 
+
+ </h3>
+	<center>
+    <div style="float:center;">
+	<button type="submit" id="submit" value="submit" onclick="submit">Submit</button>
+	</a>
+	</center>
+	<p>
+	<center>
+	<div style="float:absolute">
+	
+	<a href="home.html"><button type="button" id="cancel" onclick="return">Cancel</button></a>
+	</center>
+	</p>
+  
+
+  
+</form>
+
+
+</body>
+</html>
